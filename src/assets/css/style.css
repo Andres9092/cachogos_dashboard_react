@@ -335,6 +335,13 @@ button:hover , button:focus{  /* TRANSFORMO POINTER DEL MOUSE EN LOS BOTONES-- *
     .iconoBuscarMargenDerecho {
         display: none
     }
+
+    .leftBottomHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between
+    }
+
 }
 
 /*--------------------------------------------------2da qery 750px----------------------------------------------------*/

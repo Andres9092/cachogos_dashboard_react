@@ -5,15 +5,15 @@ import Footer from './Footer';
 
 function App() {
   return (
-    <div >
-      
-      <TopBar /> 
-      <MainContent />  
-      <Footer /> 
-       
-       
-    </div>
-  );
+    
+    <React.Fragment>
+         
+      <TopBar/> 
+      <MainContent/>  
+      <Footer/> 
+
+    </React.Fragment>
+  )
 }
 
 export default App;

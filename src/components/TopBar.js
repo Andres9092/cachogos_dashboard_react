@@ -1,8 +1,10 @@
 import React from 'react';
 import image from '../assets/images/Logo7 color sec 1.png';
 import '../assets/css/style.css';
+import ProductsListCompleto from './ProductsListCompleto';
+import {Link, Switch, Route} from 'react-router-dom';
+import App from './App';
 
-// import ContentWrapper from './ContentWrapper';
 // import GenresInDb from './GenresInDb';
 // import LastMovieInDb from './LastMovieInDb';
 // import ContentRowMovies from './ContentRowMovies';
@@ -14,7 +16,7 @@ function TopBar(){
     return(
         <React.Fragment>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
@@ -46,7 +48,7 @@ function TopBar(){
    
            </div>      
            
-           <a href="/"><img className="logoCachogoPetShop" src={image} alt="Logotipo Cachgos Pet Shop"/></a>
+           <Link to ="/"><img className="logoCachogoPetShop" src={image} alt="Logotipo Cachgos Pet Shop"/></Link>
        </div>
                 
 
@@ -79,7 +81,8 @@ function TopBar(){
    
        <ul className="leftBottomHeader">
 
-           <li><a className="productos" href="/products">Productos</a></li>
+           <li><Link className="productos" to ="/ProductsListCompleto">Productos</Link></li>
+           <li><Link className="productos" to ="/">Estadísticas</Link></li>
            
        </ul>
 
@@ -98,9 +101,22 @@ function TopBar(){
   
 
 </header >
+            <Switch>
+                <Route exact path="/">{App}</Route>
+                <Route path="/ProductsListCompleto">{ProductsListCompleto}</Route>
+                {/* <Route path="/LastMovieInDb">
+                    <LastMovieInDb />
+                </Route>
+                <Route path="/ContentRowMovies">
+                    <ContentRowMovies />
+                </Route>
 
+                <Route path="/SearchMovies" component = {SearchMovies} />
+                
+                <Route component={NotFound} /> */}
+            </Switch>
 
-    </React.Fragment >
+    </React.Fragment>
 )
 }
 export default TopBar;
