@@ -1,0 +1,79 @@
+.CardsRow{
+    padding:40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+
+.BoxTarjetaPadre{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.BoxInternoPadre-primary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 3px blue;
+    border-radius: 10px;
+    padding: 10px
+
+}
+
+.BoxInternoPadre-success{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 3px red;
+    border-radius: 10px;
+    padding: 10px
+}
+
+.BoxInternoPadre-warning{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 3px green;
+    border-radius: 10px;
+    padding: 10px
+
+}
+
+.DivTituloYNumero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 15px;
+}
+
+
+.novedad{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+
+}
+
+.imagenNovedad{
+    width: 20%;
+    
+}
+
+.categoriasProd{
+    display: flex;
+    flex-direction:column;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin:40px
+}
+
+.stat{
+    padding-top: 1px;
+}

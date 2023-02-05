@@ -1,6 +1,5 @@
 import React from 'react'
 import TopBar from './TopBar';
-import MainContent from './MainContent';
 import Footer from './Footer';
 
 function App() {
@@ -8,10 +7,11 @@ function App() {
     
     <React.Fragment>
          
-      <TopBar/> 
-      <MainContent/>  
-      <Footer/> 
+      <TopBar/>  
+      <Footer/>  
 
+      {/* TopBar y Footer quedan fijos en la pagina. Primero se lee el TopBar, donde estan definidas las rutas. */}
+      
     </React.Fragment>
   )
 }

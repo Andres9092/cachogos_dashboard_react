@@ -2,15 +2,9 @@ import React from 'react';
 import image from '../assets/images/Logo7 color sec 1.png';
 import '../assets/css/style.css';
 import ProductsListCompleto from './ProductsListCompleto';
+import MainContent from './MainContent';
+import Statistics from './Statistics';
 import {Link, Switch, Route} from 'react-router-dom';
-import App from './App';
-
-// import GenresInDb from './GenresInDb';
-// import LastMovieInDb from './LastMovieInDb';
-// import ContentRowMovies from './ContentRowMovies';
-// import SearchMovies from './SearchMovies';
-// import NotFound from './NotFound';
-// import {Link, Route, Switch} from 'react-router-dom';
 
 function TopBar(){
     return(
@@ -81,8 +75,8 @@ function TopBar(){
    
        <ul className="leftBottomHeader">
 
-           <li><Link className="productos" to ="/ProductsListCompleto">Productos</Link></li>
-           <li><Link className="productos" to ="/">Estadísticas</Link></li>
+           <li><Link className="productos" to ="/products">Productos</Link></li>
+           <li><Link className="productos" to ="/statistics">Estadísticas</Link></li>
            
        </ul>
 
@@ -102,9 +96,16 @@ function TopBar(){
 
 </header >
             <Switch>
-                <Route exact path="/">{App}</Route>
-                <Route path="/ProductsListCompleto">{ProductsListCompleto}</Route>
-                {/* <Route path="/LastMovieInDb">
+
+                <Route exact path = "/"><MainContent/></Route>
+
+                <Route path = "/products"><ProductsListCompleto/></Route> 
+
+                <Route path = "/statistics"><Statistics/></Route> 
+
+
+{/* 
+                <Route path="/LastMovieInDb">
                     <LastMovieInDb />
                 </Route>
                 <Route path="/ContentRowMovies">

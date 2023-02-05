@@ -8,9 +8,8 @@ import imageJUGUETES from '../assets/images/rascador.webp';
 import imageALIMENTOS from '../assets/images/card-produc1.jpg';
 import imagePASEOSYVIAJES from '../assets/images/funda perro auto.webp';
 import imageCAMASEIND from '../assets/images/colchon mascota.webp';
+
 import '../assets/css/style-home.css';
-
-
 
 function MainContent(){
     return(
@@ -65,7 +64,7 @@ function MainContent(){
 
 </main>
 
-
+        
         </React.Fragment>
 
 )
