@@ -74,6 +74,51 @@
     margin:40px
 }
 
+.categoriasProd h2{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+
 .stat{
     padding-top: 1px;
+}
+
+
+.mainProductList{
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.imagenProd{
+    width: 80%;
+}
+
+.ProdCardsRow{
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding:40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around
+   
+}
+
+.BoxProdPadre{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px grey solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.productos{
+    margin-left: 3px;
+    margin-right: 3px;
+
 }

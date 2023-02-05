@@ -1,6 +1,88 @@
 import React from 'react';
 import '../assets/css/style.css';
-// import {Link, Route, Switch} from 'react-router-dom';
+import ProdListCards from './ProdListCards';
+import image from '../assets/images/gato-puch-promo.jpg';
+import '../assets/css/cardStyles.css';
+
+let prod1INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+    
+}
+
+let prod2INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+    
+}
+
+let prod3INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+}
+
+let prod4INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+}
+
+let prod5INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+}
+
+let prod6INDB = {
+    image:image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+    
+}
+
+let prod7INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+    
+}
+
+let prod8INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+    
+}
+
+let prod9INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+}
+
+let prod10INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+}
+
+let prod11INDB = {
+    image: image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+}
+
+let prod12INDB = {
+    image:image,
+    name: 'Camas e Indumentaria',
+    price: 'primary',
+    
+}
+
+let prodListProps = [prod1INDB, prod2INDB, prod3INDB, prod4INDB, prod5INDB, prod6INDB,prod7INDB, prod8INDB, prod9INDB, prod10INDB, prod11INDB, prod12INDB]
 
 
 function ProductList(){
@@ -36,86 +118,22 @@ function ProductList(){
 <body>
   
     <main class="mainProductList">
-        <aside>
-
-            <form class="activeForm">
-                <div class="filters">
-                    <h2>filtrado por: </h2>
-                    <label for="filtro"> Alimento </label>
-                    <input type="checkbox"/>
-                </div>
-
-                <div class="filters">
-                    <p><label for="departamento" class="filters__titles">Departamento</label></p>
-                    <p><label for="filtro" id="departamento" name="gato" value="gato"> Gato </label>
-                        <input type="checkbox"/>
-                    </p>
-                    <p> <label for="filtro" id="departamento" name="perro" value="perro"> Perro </label>
-                        <input type="checkbox"/>
-                    </p>
-
-                </div>
-
-                <div class="filters">
-                    <p><label for="departamento" class="filters__titles">Categoria</label></p>
-                    <p><label for="filtro" id="departamento" name="gato" value="gato"> Categoria 1 </label>
-                        <input type="checkbox"/>
-                    </p>
-                    <p> <label for="filtro" id="departamento" name="perro" value="perro"> Categoria 2 </label>
-                        <input type="checkbox"/>
-                    </p>
-
-                    <p> <label for="filtro" id="departamento" name="perro" value="perro"> Categoria 3 </label>
-                        <input type="checkbox"/>
-                    </p>
-
-                </div>
-
-                <div class="filters">
-                    <p><label for="departamento" class="filters__titles">Marca</label></p>
-                    <p><label for="filtro" id="departamento" name="gato" value="gato"> Marca 1 </label>
-                        <input type="checkbox"/>
-                    </p>
-                    <p> <label for="filtro" id="departamento" name="perro" value="perro"> marca 2 </label>
-                        <input type="checkbox"/>
-                    </p>
-
-                    <p><label for="filtro" id="departamento" name="gato" value="gato"> Marca 3 </label>
-                        <input type="checkbox"/>
-                    </p>
-                    <p> <label for="filtro" id="departamento" name="perro" value="perro"> marca 4 </label>
-                        <input type="checkbox"/>
-                    </p>
-
-                </div>
-
-                <div class="filters">
-                    <p><label for="departamento" class="filters__titles">Edad</label></p>
-                    <p><label for="filtro" id="departamento" name="gato" value="gato"> Cachorro </label>
-                        <input type="checkbox"/>
-                    </p>
-                    <p> <label for="filtro" id="departamento" name="perro" value="perro"> Senior </label>
-                        <input type="checkbox"/>
-                    </p>
-
-                    <p><label for="filtro" id="departamento" name="gato" value="gato"> Adulto</label>
-                        <input type="checkbox"/>
-                    </p>
-                
-
-                </div>
-
-
-            </form>
-
-            <div class="activeFormMobile">
-                <span> Filtrar por : </span>
-
-            </div>
-        </aside>
-            
+                    
         <section class="cards"> 
-            
+
+
+            <div className="categoriasProd">
+                <h2>LISTADO DE PRODUCTOS</h2>
+                <div className="ProdCardsRow">
+                    {prodListProps.map( (produ, i) => {
+
+                        return <ProdListCards {...produ} key={i}/>
+                    
+                    })}
+
+                </div>
+            </div>
+
           
                     {/* <% for( let productLis of productlist ) { %>
                 <div class="card">    
