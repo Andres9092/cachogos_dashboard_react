@@ -48,24 +48,37 @@
   }
 
   .categoriasHome {
-    padding: 0px;
+  padding: 0px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   width: 100%;
-  order: 2;
+  order:2;
   }
 
   .categoriasHome img {
     width: 100%;
   }
   .cat1{
-    order: 3;
+  order: 3;
   flex-grow: 1;
   flex-basis: 40%;
   margin: 2%;
   }
 
+  .cat2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 3;
+    flex-grow: 1;
+    flex-basis: 40%;
+    margin: 2%;
+    border: 1px solid #000;
+    border-radius: 8px;
+    text-align: center;
+    
+    }
 
   .carrouselPromociones h2 {
     text-align: center;
@@ -258,6 +271,7 @@
     line-height: 37px;
     margin: 5px auto;
   }
+
   
   @media(min-width: 640px){
       .topbarActivacion{
@@ -417,7 +431,7 @@
       }
 
       .categoriasHome {
-        width: 50%;
+        width: 80%;
         margin-top: 5px;
       }
       .carrouselDos{
@@ -434,8 +448,22 @@
 
       display: flex;
       flex-direction: row;
+      align-items: flex-start;
     }
 
+   
+    .contenedoresAnimales{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .contenedoresProductos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
 }
 
 
