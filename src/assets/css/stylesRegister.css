@@ -1,0 +1,531 @@
+header {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    height: 80%;
+}
+
+main {
+    text-align: center;
+    height: 400px;
+    background-image: url("../images/fondo2.jpg");
+    background: contain;
+}
+
+/* footer button, */
+form button {
+    height: 28px;
+    width: 200px;
+    transition: .7s;
+    font-size: 18px;
+}
+
+main form button:hover {
+    color:white;
+    background-color: rgb(4, 62, 255);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+footer button:hover {
+    color:white;
+    background-color: rgb(4, 62, 255);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.boton-registro {
+    height: 25px;
+}
+
+@media screen and (max-width: 525px) {
+    
+    form {
+        border-radius: 10px;
+        border: 1px solid #3694F5;
+        margin-bottom: 5%;
+        display: inline-block;
+        background-color: rgb(223, 219, 219);
+        height: 80%;
+        width: 70%;
+    }
+    
+    .nombre {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+    
+    .apellido {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+    
+    .email {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+
+    .image {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+
+    .editImagen {
+
+        width: 20px;
+        height: 20px;
+    }
+    
+    .contraseña {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+    
+    .terminos {
+        display: flex;
+        justify-content: center;
+    }
+    
+    main form p {
+        display: none;
+    }
+    
+    .nombre {
+        margin-top: 5%;
+    }
+    
+    .boton-registro {
+        margin-bottom: 5%;
+    }
+
+    .boton {
+        border-radius: 8px;
+        border-color: grey;
+    }
+
+    .imageLabel {
+        padding-top: 1.5%;
+        margin-bottom: 100px;
+    }
+    
+    .nameInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 90%;
+        display: flex;
+        margin-inline: auto;
+    }
+    
+    .lastnameInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 90%;
+        display: flex;
+        margin-inline: auto;
+    }
+    
+    .mailInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 90%;
+        display: flex;
+        margin-inline: auto;
+    }
+
+    .imageInput-i {
+        background-color: white;
+        border-radius: 8px;
+        width: 90%;
+        display: flex;
+        margin-inline: auto;
+        margin-bottom: 5px;
+    }
+    
+    .contraInput-i {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 90%;
+        display: flex;
+        margin-inline: auto;
+    }
+
+    .nameInput {
+        text-align: center;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+        width: 100%;
+    }
+    
+    .lastnameInput {
+        text-align: center;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+        width: 100%;
+    }
+    
+    .mailInput {
+        text-align: center;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+        width: 100%;
+    }
+    
+    .contraInput {
+        text-align: center;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+        width: 100%;
+    }
+
+    .checkInput {
+        margin-right: 1%;
+    }
+    
+    .nameIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .lastnameIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .mailIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+
+    .imageIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .contraIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    .errores {
+        border-radius: 10px;
+        border: 1px solid #3694F5;
+       
+        display: inline-block;
+        background-color: rgb(223, 219, 219);
+      
+        width: 70%;
+    }
+
+    .errores li{
+        
+         
+        text-decoration: black dotted;
+        text-align: center;
+        border-radius: 10px;
+        color:#ff1024;
+}
+
+}
+
+@media screen and (min-width:525px) {
+
+    main {
+        margin-top: 150px;
+        height: 450px;
+    }
+
+    main h2 {
+        padding-top: 20px;
+    }
+
+    main section {
+        display: flex;
+        background-color: orange;
+        justify-content: space-around
+    }
+    
+    main section a {
+        background-color: grey;
+        justify-content: space-around
+    }
+    
+    main section div a {
+        background-color: grey;
+        justify-content: space-around;
+        margin: 10px;
+    }
+    
+    .campos-form {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .terminos {
+        display: flex;
+        padding-top: 1%;
+    }
+    
+    main form p {
+        display: none;
+    }
+    
+    .boton-registro {
+        margin-bottom: 3%;
+    }
+
+    .boton {
+        background-color: beige;
+        border-radius: 8px;
+        border-color: grey;
+    }
+
+    form {
+        border-radius: 10px;
+        border: 1px solid #3694F5;
+        margin-bottom: 5%;
+        display: flex;
+        background-color: rgb(223, 219, 219);
+        height: 350px;
+        width: 470px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-inline: auto
+    }
+
+    .boton-registro{
+        margin-inline: auto;
+    }
+
+    .boton {
+        border-radius: 8px;
+        border-color: grey;
+    }
+
+    .nombre {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2%;
+    }
+
+    .apellido {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2%;
+    }
+
+    .email {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2%;
+    }
+
+    .image {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2%;
+    }
+
+    .contraseña {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2%;
+    }
+
+    .terminos {
+        display: flex;
+        margin-bottom: 2%;
+        width: 45%;
+        justify-content: center;
+    }
+
+    .nameLabel {
+        font-size: 125%;
+        padding-top: 1.5%;
+        margin-right: 5px;
+    }
+
+    .lastnameLabel {
+        font-size: 125%;
+        padding-top: 1.5%;
+        margin-right: 5px;
+    }
+
+    .mailLabel {
+        font-size: 125%;
+        padding-top: 1.5%;
+        margin-right: 10px;
+    }
+
+    .imageLabel {
+        font-size: 125%;
+        padding-top: 1.5%;
+        margin-right: 5px;
+    }
+
+    .contraLabel {
+        font-size: 125%;
+        padding-top: 1.5%;
+        margin-right: 5px;
+    }
+
+    .terminosLabel {
+        margin-right: 5px;
+    }
+
+    .nameInput-i {
+        display: flex;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+    
+    .lastnameInput-i {
+        display: flex;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+
+    .mailInput-i {
+        display: flex;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+    
+    .imageInput-i {
+        display: flex;
+        background-color: white;
+        border-radius: 8px;
+        margin-bottom: 5px
+    }
+
+    .contraInput-i {
+        display: flex;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid black;
+    }
+
+    .nameInput {
+        width: 210px;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+    }
+    
+    .lastnameInput {
+        width: 210px;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+    }
+    
+    .mailInput {
+        width: 210px;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+    }
+
+    .imageInput {
+        width: 310px;
+    }
+    
+    .contraInput {
+        width: 210px;
+        border-radius: 8px;
+        border: 0px;
+        outline: none;
+    }
+
+    .checkInput {
+        margin-right: 1%;
+    }
+
+    .nameIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .lastnameIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .mailIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+    
+    .imageIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+
+    .contraIcon {
+        display: none;
+        margin-top: 4px;
+        padding-right: 5px;
+    }
+
+    footer button {
+        height: 20px;
+        width: 120px;
+        transition: .7s;
+        font-size: 18px;
+    }
+
+    .errores {          
+          
+            text-align: center;
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #3694F5;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-inline: auto;
+            align-items: center;
+            border-radius: 10px;
+            width: 470px;
+            background-color: rgb(223, 219, 219);         
+          
+    }
+    .errores li{
+        
+            text-decoration: black dotted;
+            text-align: center;
+            border-radius: 10px;
+            color:#ff1024;
+    }
+}
+

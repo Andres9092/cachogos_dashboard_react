@@ -4,6 +4,8 @@ import '../assets/css/style.css';
 import ProductsListCompleto from './ProductsListCompleto';
 import MainContent from './MainContent';
 import Statistics from './Statistics';
+import Login from './Login';
+import Register from './Register';
 import {Link, Switch, Route} from 'react-router-dom';
 
 function TopBar(){
@@ -61,8 +63,8 @@ function TopBar(){
             <li><a className="iconoBuscarMargenDerecho" href="aaaaa.html"><i className="fa-solid fa-magnifying-glass"></i></a></li>
             <ul className="iconoUserRegistrarse">
                 <li><a className="iconoUserMargenDerecho" href="/users/login"><i className="fa-solid fa-user"></i></a></li>
-                <li><a className="IniciarSesion" href="/users/login">Iniciar Sesión/</a></li>
-                <li><a className="Registrarse" href="/users/register">Registrarse</a></li>    
+                <li><Link className="IniciarSesion" to ="/login">Iniciar Sesión</Link></li>
+                <li><Link className="Registrarse" to ="/register">Registrarse</Link></li>    
             </ul>
               
         </ul>
@@ -102,6 +104,8 @@ function TopBar(){
                 <Route path = "/products"><ProductsListCompleto/></Route> 
 
                 <Route path = "/statistics"><Statistics/></Route> 
+                <Route path = "/login"><Login/></Route> 
+                <Route path = "/register"><Register/></Route>
 
 
 {/* 
