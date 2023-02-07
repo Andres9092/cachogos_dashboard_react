@@ -2,20 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/cardStyles.css';
 
-function SmallCategoryCards(props){
+
+function SmallCategoryCards(){
     return(
 
         <div className="BoxTarjetaPadre">
-            <div className={`BoxInternoPadre-${props.color}`}>
+            <div className="BoxInternoPadre">
                 <div className="DivTituloYNumero">
             
-                        <div className={`text-xs font-weight-bold text-${props.color} text-uppercase mb-1`}> {props.title}</div>
-                        <div className="h5 mb-0 font-weight-bold text-gray-800">{props.cuantity}</div>
+                        <div className=""><p>Alimentos</p></div>
+                        <div className="h5 mb-0 font-weight-bold text-gray-800">{cateProd}</div>
                 </div>
                         
-                <div className="DivSimbolo">
-                        <i className={`fas ${props.icon} fa-2x text-gray-300`}></i>
-                </div>
             </div>
         </div>
         
