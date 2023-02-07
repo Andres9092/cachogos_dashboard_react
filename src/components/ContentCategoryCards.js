@@ -47,8 +47,9 @@ const [cateProd,setCateProdCount] = useState([])
         .then(catePr => {
     
             //console.log('catePr:', catePr) // el console.log se ve siempre en el navegador por ser del FRONT END.
-            console.log('catePr.countByCategory:', catePr.countByCategory)
-            setCateProdCount(JSON.parse(JSON.stringify(catePr.countByCategory)))
+            console.log('catePr.countByCategory:', catePr.countByCategory)  //catePr.countByCategory -> [{'name': 'alimentos', count:3}, {'name': paseos , count:4},{'name': 'juguetes', 'count':2},{'name': 'camas e ind', 'count':5}]
+            
+            setCateProdCount(JSON.parse(JSON.stringify(catePr.countByCategory)))   //transforma el array de objeto de formato Json a no Json para poder ser iterable.-> [{name: alimentos, count:3}, {name: paseos , count:4},{name: juguetes, count:2},{name: camas e ind, count:5}]
             
             console.log('cateProd:', cateProd)
         })
@@ -72,10 +73,10 @@ const [cateProd,setCateProdCount] = useState([])
             
             <h2>PRODUCTOS POR CATEGORÍAS</h2>   
             <div className="CardsRow">
-            {cateProd.map( (catp, i) => {
-                console.log('catp:',catp)
-                return <SmallCategoryCards {...catp} key={i}/>  
-            })}
+            {cateProd.map( (catp, i) => {                                   //  capt 0                      capt 1                           capt 2           capt 3                
+                console.log('catp:',catp)                           // [{name: alimentos, count:3}, {name: paseos , count:4},{name: juguetes, count:2},{name: camas e ind, count:5}]
+                return <SmallCategoryCards {...catp} key={i}/>  //{...catp}  -> renderiza las tarjetas con cada catp respectiva -> la primera con los datos de  catp1, la segunda con catp y asi respectivamente.
+            })} 
             </div>
         </div>
     )

@@ -8,7 +8,7 @@ function SmallCategoryCards(props){
 
         <div className="BoxTarjetaPadre">
             <div className="BoxInternoPadre">
-                <div className="DivTituloYNumero">
+                <div className="DivTituloYNumero">    {/*name: alimentos, count:3*/}
             
                         <div className=""><p>{props.name}</p></div>
                         <div className="h5 mb-0 font-weight-bold text-gray-800">{props.count}</div>
