@@ -1,5 +1,5 @@
 import React from 'react';
-// import SmallCategoryCards from './SmallCategoryCards';
+import SmallCategoryCards from './SmallCategoryCards';
 import {useEffect, useState} from 'react';
 
 
@@ -50,9 +50,8 @@ const [cateProd,setCateProdCount] = useState([])
             console.log('catePr.countByCategory:', catePr.countByCategory)
             setCateProdCount(JSON.parse(JSON.stringify(catePr.countByCategory)))
             
+            console.log('cateProd:', cateProd)
         })
-
-        console.log('cateProd:', cateProd)
         .catch(error => console.log(error))
     
     }, [])
@@ -75,8 +74,7 @@ const [cateProd,setCateProdCount] = useState([])
             <div className="CardsRow">
             {cateProd.map( (catp, i) => {
                 console.log('catp:',catp)
-                return <SmallCategoryCards {...catp} key={i}/>
-            
+                return <SmallCategoryCards {...catp} key={i}/>  
             })}
             </div>
         </div>

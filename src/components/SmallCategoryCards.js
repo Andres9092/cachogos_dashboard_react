@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import '../assets/css/cardStyles.css';
 
 
-function SmallCategoryCards(){
+function SmallCategoryCards(props){
     return(
 
         <div className="BoxTarjetaPadre">
             <div className="BoxInternoPadre">
                 <div className="DivTituloYNumero">
             
-                        <div className=""><p>Alimentos</p></div>
-                        <div className="h5 mb-0 font-weight-bold text-gray-800">{cateProd}</div>
+                        <div className=""><p>{props.name}</p></div>
+                        <div className="h5 mb-0 font-weight-bold text-gray-800">{props.count}</div>
                 </div>
                         
             </div>
@@ -23,23 +23,19 @@ function SmallCategoryCards(){
 /* DEFINICIÓN DE PROPIEDADES POR DEFAULT */
 
 SmallCategoryCards.defaultProps = {
-    title: 'No Title',
-    color: 'success',
-    cuantity: 'No cuatity',
-    icon: 'fa-clipboard-list'
+    name: 'Not found Title',
+    count: 'Not found'
 }
 
 /* PROPTYPES */
 
 SmallCategoryCards.propTypes = {
-    atritutes: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired,
-        cuantity: PropTypes.oneOfType([
+    attributes: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        count: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number
         ]).isRequired,
-        icon: PropTypes.string.isRequired
     })
 }
 
