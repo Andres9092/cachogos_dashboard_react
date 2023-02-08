@@ -15,14 +15,13 @@ function MainContent(){
     return(
         <React.Fragment>
 
-<link rel="stylesheet" href="/css/style-home.css"></link>
 
 <main>
 
         <nav className = "divisionesCategorias">
 
             <div className='contenedoresAnimales'>
-                <h2>Categorías de animales</h2>
+                <h2 className='titulosCate'>Categorías de animales</h2>
                 <div className="categoriasHome">
                     <div className="cat1"> <img src={imageCAT} alt=""/>
                     </div>
@@ -37,7 +36,7 @@ function MainContent(){
             </div>
 
             <div className='contenedoresProductos' >
-                <h2>Categorías de productos</h2>
+                <h2 className='titulosCate'>Categorías de productos</h2>
                 <div className="categoriasHome">
                     <div className="cat2">
                         <h3>Alimentos</h3>

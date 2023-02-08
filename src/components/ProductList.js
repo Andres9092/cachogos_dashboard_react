@@ -1,91 +1,108 @@
 import React from 'react';
 import '../assets/css/style.css';
 import ProdListCards from './ProdListCards';
-import image from '../assets/images/gato-puch-promo.jpg';
+import {useEffect, useState} from 'react';
+// import image from '../assets/images/gato-puch-promo.jpg';
 import '../assets/css/cardStyles.css';
 
-let prod1INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
+// let prod1INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
     
-}
+// }
 
-let prod2INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
+// let prod2INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
     
-}
+// }
 
-let prod3INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
-}
+// let prod3INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
+// }
 
-let prod4INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
-}
+// let prod4INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
+// }
 
-let prod5INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
-}
+// let prod5INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
+// }
 
-let prod6INDB = {
-    image:image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
+// let prod6INDB = {
+//     image:image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
     
-}
+// }
 
-let prod7INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
+// let prod7INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
     
-}
+// }
 
-let prod8INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
+// let prod8INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
     
-}
+// }
 
-let prod9INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
-}
+// let prod9INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
+// }
 
-let prod10INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
-}
+// let prod10INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
+// }
 
-let prod11INDB = {
-    image: image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
-}
+// let prod11INDB = {
+//     image: image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
+// }
 
-let prod12INDB = {
-    image:image,
-    name: 'Camas e Indumentaria',
-    price: 'primary',
+// let prod12INDB = {
+//     image:image,
+//     name: 'Camas e Indumentaria',
+//     price: 'primary',
     
-}
+// }
 
-let prodListProps = [prod1INDB, prod2INDB, prod3INDB, prod4INDB, prod5INDB, prod6INDB,prod7INDB, prod8INDB, prod9INDB, prod10INDB, prod11INDB, prod12INDB]
+// let prodListProps = [prod1INDB, prod2INDB, prod3INDB, prod4INDB, prod5INDB, prod6INDB,prod7INDB, prod8INDB, prod9INDB, prod10INDB, prod11INDB, prod12INDB]
 
 
 function ProductList(){
+
+    const [product, setProduct] = useState([])
+    
+    useEffect( () => {   // npm i cors  INSTALADO EN TERMINAL DEL BACKEND PARA QUE FUNCIONE EL FETCH DE LA API Y SE VEA POR NAVEGADOR LOS RESULTADOS.
+        fetch("http://localhost:4000/api/products")
+        .then(response => response.json())
+        .then(product => {
+
+            setProduct(JSON.parse(JSON.stringify(product.products)))
+
+        })
+        .catch(error => console.log(error))
+
+    }, [])
+
+
     return(
         <React.Fragment>
   
@@ -117,15 +134,15 @@ function ProductList(){
    
 <body>
   
-    <main class="mainProductList">
+    <main class="mainProductList1">
                     
         <section class="cards"> 
 
 
             <div className="categoriasProd">
-                <h2>LISTADO DE PRODUCTOS</h2>
+                <h4 className="tituloListadoProd">LISTADO DE PRODUCTOS</h4>
                 <div className="ProdCardsRow">
-                    {prodListProps.map( (produ, i) => {
+                    {product.map( (produ, i) => {
 
                         return <ProdListCards {...produ} key={i}/>
                     

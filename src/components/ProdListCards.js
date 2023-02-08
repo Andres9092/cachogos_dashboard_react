@@ -6,15 +6,15 @@ import '../assets/css/cardStyles.css';
 function ProdListCards(props){
     return(
 
-        <div className="BoxProdPadre">
+        <div className="BoxProdPadre1">
             
                 <div className="ImagenProdCard">
-                    <img className="imagenProd" src={props.image} alt="Imagen del producto"/>     
+                    <img className="imagenProd1" src={props.imagesURL} alt="Imagen del producto"/>     
                 </div>
                         
                 <div className="Name&PriceProd">
                         <p className="">{props.name}</p>
-                        <p className="">{props.price}</p>
+                        <p className="">{props.description}</p>
                 </div>
           
         </div>

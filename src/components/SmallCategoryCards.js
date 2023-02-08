@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 import '../assets/css/cardStyles.css';
 
 
+let iconosProps = "fa-solid fa-tag"
+
 function SmallCategoryCards(props){
     return(
 
-        <div className="BoxTarjetaPadre">
+        <div className="BoxTarjetaPadre1">
             <div className="BoxInternoPadre">
-                <div className="DivTituloYNumero">    {/*name: alimentos, count:3*/}
+                <div className="DivTituloYNumero">    {/*{name: alimentos, count:3}*/}
             
                         <div className=""><p>{props.name}</p></div>
-                        <div className="h5 mb-0 font-weight-bold text-gray-800">{props.count}</div>
+                        <div className="divNumero">{props.count}</div>
                 </div>
-                        
+                <div clasName="DivSimbolo1">
+                        <i class={iconosProps}></i>  {/* me trigo el codigo del icono completo de la pag 'fontawsome', de los iconos gratis.  */}
+                </div>      
             </div>
         </div>
         

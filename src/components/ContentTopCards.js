@@ -1,5 +1,6 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
+import '../assets/css/style-home.css';
 
 
 // let productosInDB = {
@@ -30,8 +31,11 @@ import {useEffect, useState} from 'react';
 
 function ContentTopCards(){
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+
 const [productsCount,setProductosCount] = useState([])
-// const [categoriasCount,setCategoriasCount] = useState([])
+const [categoriasCount,setCategoriasCount] = useState([])
 const [usuariosCount,setUsuariosCount] = useState([])
 
 useEffect( () => {   // npm i cors  INSTALADO EN TERMINAL DEL BACKEND PARA QUE FUNCIONE EL FETCH DE LA API Y SE VEA POR NAVEGADOR LOS RESULTADOS.
@@ -49,18 +53,18 @@ useEffect( () => {   // npm i cors  INSTALADO EN TERMINAL DEL BACKEND PARA QUE F
 }, [])
 
 
-// useEffect( () => {
-//     fetch("url")
-//     .then(response => response.json())
-//     .then(categorias => {
+useEffect( () => {
+    fetch("http://localhost:4000/api/products")
+    .then(response => response.json())
+    .then(categorias => {
 
-//         console.log(categorias)
-//         setCategoriasCount(categorias.count)
+        console.log(categorias)
+        setCategoriasCount(categorias.countAnimalCategory)
 
-//     })
-//     .catch(error => console.log(error))
+    })
+    .catch(error => console.log(error))
 
-// }, )
+}, )
 
 
 useEffect( () => {
@@ -78,34 +82,37 @@ useEffect( () => {
 
     return (
     
+
+        
         <div className="categoriasProd">
-            <h2>APP DASHBOARD - GENERAL</h2>
+            <h2 className='titulosStatistics'>APP DASHBOARD - GENERAL</h2>
             <div className="CardsRow">
 
                 <div className="BoxTarjetaPadre">
                     <div className="BoxInternoPadre">
                         <div className="DivTituloYNumero">
                 
-                            <div className=""><p>Productos</p></div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800">{productsCount}</div>
+                            <div className=""><p>Productos</p></div>    
+                            <div className="divNumero">{productsCount}</div>
                         </div>
-                            
-                        <div className="DivSimbolo">
-                            <i fa-2x text-gray-300></i>
+                    
+                        {/*                                 // productsCount es la variable con el nuevo estado dado por setUsuariosCount que trae la info de la API atraves del fetch.  */}
+                        <div clasName= "DivSimbolo">
+                        <i class="fa-solid fa-list fa-lg"></i>  {/* me trigo el codigo del icono completo de la pag 'fontawsome', de los iconos gratis.  */}
                         </div>
                     </div>
                 </div>    
-
+              
                 <div className="BoxTarjetaPadre">
                     <div className="BoxInternoPadre">
                         <div className="DivTituloYNumero">
                 
                             <div className=""><p>Categorías de animales</p></div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800"><p>4</p></div>
+                            <div className="divNumero">{categoriasCount}</div>
                         </div>
                             
                         <div className="DivSimbolo">
-                            <i fa-2x text-gray-300></i>
+                            <i class="fa-solid fa-paw fa-lg"></i>
                         </div>
                     </div>
                 </div>  
@@ -115,11 +122,11 @@ useEffect( () => {
                         <div className="DivTituloYNumero">
                 
                             <div className=""><p>Categorías de usuarios</p></div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800">{usuariosCount}</div>
+                            <div className="divNumero">{usuariosCount}</div>
                         </div>
                             
                         <div className="DivSimbolo">
-                            <i fa-2x text-gray-300></i>
+                            <i class="fa-solid fa-user fa-lg"></i>
                         </div>
                     </div>
                 </div>
