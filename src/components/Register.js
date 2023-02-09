@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/styleLogin.css';
+import '../assets/css/stylesRegister.css';
 
 
 function Register() {
@@ -9,12 +9,12 @@ function Register() {
             <body>
 
 
-                <main>
+                <main className="mainRegister">
 
                     <h2 class="titulo-main">Crear mi cuenta</h2>
 
 
-                    <form action="/users/register" class="formuRegister" id="" method="post" enctype="multipart/form-data">
+                    <form action="/users/register" className="formuRegister" id="" method="post" enctype="multipart/form-data">
                         <div class="campos-form">
 
 
@@ -75,28 +75,28 @@ function Register() {
                                         <i class="fa-solid fa-circle-xmark"></i>
                                    </div>
                                 </div>
-                                <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente
-                                    mayúscula, minúscula y número.</p>
+                                {/* <p class="error-password">La contraseña tiene que ser de 8 a 16 carácteres, debe incluir minimamente
+                                    mayúscula, minúscula y número.</p> */}
                             </div>
 
-                            <div class="archivos">
+                            {/* <div class="archivos">
                                 <div class="imagen-producto">
                                     <label for="imagenProducto">Imagen</label>
                                     <div class="imgProd">
                                         <input type="file" name="imagen" id="imagenProducto" multiple />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div class="terminos" id="">
                             <label for="terminos" class="terminosLabel"></label>
                             <input type="checkbox" class="checkInput" name="terminos" id="terminos" />
-                            <p>Acepto los Terminos y Condiciones</p>
+                            <p className="condicionesAc">Acepto los Terminos y Condiciones</p>
                         </div>
-                        <div class="error-formulario" id="">
+                        {/* <div class="error-formulario" id="">
                             <p class=""><b>Error:</b> Por favor rellena el formulario correctamente.</p>
-                        </div>
+                        </div> */}
                         <div class="boton-registro">
                             <button type="submit" class="boton">Registrarme</button>
                         </div>

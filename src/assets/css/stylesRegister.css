@@ -1,28 +1,28 @@
-header {
+/* header {
     text-align: center;
 }
 
 main {
     text-align: center;
     height: 80%;
-}
+} */
 
-main {
+.mainRegister {
     text-align: center;
-    height: 400px;
+    height: 90%;
     background-image: url("../images/fondo2.jpg");
     background: contain;
 }
 
 /* footer button, */
-form button {
+.formuRegister button {
     height: 28px;
     width: 200px;
     transition: .7s;
     font-size: 18px;
 }
 
-main form button:hover {
+.mainRegister form button:hover {
     color:white;
     background-color: rgb(4, 62, 255);
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -40,7 +40,7 @@ footer button:hover {
 
 @media screen and (max-width: 525px) {
     
-    form {
+    .formuRegister {
         border-radius: 10px;
         border: 1px solid #3694F5;
         margin-bottom: 5%;
@@ -96,7 +96,7 @@ footer button:hover {
         justify-content: center;
     }
     
-    main form p {
+    .mainRegister form p {
         display: none;
     }
     
@@ -251,16 +251,16 @@ footer button:hover {
 
 @media screen and (min-width:525px) {
 
-    main {
+    .mainRegister {
         margin-top: 150px;
-        height: 450px;
+        height: 530px;
     }
 
-    main h2 {
+    .mainRegister h2 {
         padding-top: 20px;
     }
 
-    main section {
+    /* main section {
         display: flex;
         background-color: orange;
         justify-content: space-around
@@ -276,7 +276,7 @@ footer button:hover {
         justify-content: space-around;
         margin: 10px;
     }
-    
+     */
     .campos-form {
         padding-top: 30px;
         display: flex;
@@ -289,7 +289,7 @@ footer button:hover {
         padding-top: 1%;
     }
     
-    main form p {
+    .mainRegister form p {
         display: none;
     }
     
@@ -303,13 +303,13 @@ footer button:hover {
         border-color: grey;
     }
 
-    form {
+    .formuRegister {
         border-radius: 10px;
         border: 1px solid #3694F5;
         margin-bottom: 5%;
         display: flex;
         background-color: rgb(223, 219, 219);
-        height: 350px;
+        height: 420px;
         width: 470px;
         flex-direction: column;
         flex-wrap: wrap;
@@ -526,6 +526,10 @@ footer button:hover {
             text-align: center;
             border-radius: 10px;
             color:#ff1024;
+    }
+
+    .terminos .condicionesAc{
+        display: block;
     }
 }
 

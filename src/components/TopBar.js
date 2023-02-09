@@ -62,7 +62,7 @@ function TopBar(){
             <li><a className="logo-wapp-desktop" href="aaaaa.html"><i className="fa-brands fa-whatsapp"></i></a></li>
             <li><a className="iconoBuscarMargenDerecho" href="aaaaa.html"><i className="fa-solid fa-magnifying-glass"></i></a></li>
             <ul className="iconoUserRegistrarse">
-                <li><a className="iconoUserMargenDerecho" href="/users/login"><i className="fa-solid fa-user"></i></a></li>
+                <li><Link className="iconoUserMargenDerecho" to ="/login"><i className="fa-solid fa-user"></i></Link></li>
                 <li><Link className="IniciarSesion" to ="/login">Iniciar Sesión</Link></li>
                 <li><Link className="Registrarse" to ="/register">Registrarse</Link></li>    
             </ul>
