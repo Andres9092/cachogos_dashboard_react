@@ -121,7 +121,7 @@ useEffect( () => {
                     <div className="BoxInternoPadre">
                         <div className="DivTituloYNumero">
                 
-                            <div className=""><p>Categorías de usuarios</p></div>
+                            <div className=""><p>Cantidad de usuarios</p></div>
                             <div className="divNumero">{usuariosCount}</div>
                         </div>
                             
